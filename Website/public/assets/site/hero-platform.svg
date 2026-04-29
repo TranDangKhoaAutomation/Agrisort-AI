@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-label="AGRISORT AI platform hero">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e6f57"/>
+      <stop offset="100%" stop-color="#6a58ff"/>
+    </linearGradient>
+    <linearGradient id="accentA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff9b2f"/>
+      <stop offset="100%" stop-color="#7f63ff"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,.30)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,.08)"/>
+    </linearGradient>
+    <filter id="blur-lg" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#101938" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#121b3d" flood-opacity=".12"/>
+    </filter>
+    <style>
+    .title { font: 800 44px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.96); letter-spacing: .04em; }
+    .eyebrow { font: 700 18px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.82); letter-spacing: .18em; text-transform: uppercase; }
+    .label { font: 700 20px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.9); }
+    .small { font: 600 16px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.74); }
+</style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <circle cx="1450" cy="140" r="250" fill="#ffd27d" opacity=".42" filter="url(#blur-lg)"/>
+  <circle cx="220" cy="1040" r="300" fill="#5ef0ba" opacity=".30" filter="url(#blur-lg)"/>
+  <circle cx="1120" cy="920" r="180" fill="#ffffff" opacity=".08" filter="url(#blur-lg)"/>
+  <g opacity=".12" stroke="#ffffff" fill="none">
+    <path d="M70 180c160-60 320-74 470-18s316 68 520 8 332-58 470 8"/>
+    <path d="M20 248c186-76 378-90 570-24s390 74 574 10 316-66 436-26"/>
+    <path d="M84 1034c220-76 388-86 542-22s338 74 544 14 310-66 424-26"/>
+  </g>
+  
+  <g filter="url(#shadow)">
+    <rect x="94" y="108" width="670" height="920" rx="58" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.28"/>
+    <rect x="846" y="170" width="664" height="386" rx="48" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.24"/>
+    <rect x="908" y="622" width="520" height="252" rx="40" fill="#ffffff" fill-opacity="0.11" stroke="#ffffff" stroke-opacity="0.24"/>
+  </g>
+  <text x="154" y="216" class="eyebrow">AGRISORT-AI</text>
+  <text x="154" y="290" class="title">AI grading</text>
+  <text x="154" y="350" class="title">QR traceability</text>
+  <text x="154" y="454" class="small">Scan produce, classify quality, sync lot data and publish QR trace in one sleek flow.</text>
+  
+    <g filter="url(#soft-shadow)">
+      <rect x="154" y="520" width="138" height="46" rx="23" fill="url(#accentA)" opacity=".94"/>
+      <text x="178" y="550" class="small" fill="#ffffff">Vision AI</text>
+    </g>
+  
+    <g filter="url(#soft-shadow)">
+      <rect x="306" y="520" width="176" height="46" rx="23" fill="rgba(255,255,255,.18)" opacity=".94"/>
+      <text x="330" y="550" class="small" fill="#ffffff">Quality Sort</text>
+    </g>
+  
+    <g filter="url(#soft-shadow)">
+      <rect x="496" y="520" width="132" height="46" rx="23" fill="rgba(255,255,255,.18)" opacity=".94"/>
+      <text x="520" y="550" class="small" fill="#ffffff">Live QR</text>
+    </g>
+  <g transform="translate(160 612)">
+    <rect x="0" y="0" width="538" height="320" rx="34" fill="#ffffff" opacity=".09"/>
+    <rect x="32" y="38" width="474" height="18" rx="9" fill="#ffffff" opacity=".20"/>
+    <rect x="32" y="82" width="210" height="186" rx="28" fill="#ffffff" opacity=".16"/>
+    <rect x="266" y="82" width="240" height="82" rx="24" fill="#ffffff" opacity=".14"/>
+    <rect x="266" y="186" width="240" height="82" rx="24" fill="#ffffff" opacity=".12"/>
+    
+    <g filter="url(#soft-shadow)">
+      <circle cx="126" cy="176" r="56" fill="#ffb140"/>
+      <circle cx="126" cy="176" r="40" fill="#ffd99f" opacity=".62"/>
+      <path d="M118 118c18-32 62-44 98-18-16 34-46 54-88 58-16-12-20-24-10-40z" fill="#68df96" opacity=".92"/>
+    </g>
+    
+    <g filter="url(#soft-shadow)">
+      <circle cx="378" cy="122" r="28" fill="#53d389"/>
+      <circle cx="378" cy="122" r="20" fill="#bef3cd" opacity=".62"/>
+      <path d="M370 92c18-32 62-44 98-18-16 34-46 54-88 58-16-12-20-24-10-40z" fill="#68df96" opacity=".92"/>
+    </g>
+    
+    <g filter="url(#soft-shadow)">
+      <circle cx="438" cy="122" r="28" fill="#ff7586"/>
+      <circle cx="438" cy="122" r="20" fill="#ffc3cf" opacity=".62"/>
+      <path d="M430 92c18-32 62-44 98-18-16 34-46 54-88 58-16-12-20-24-10-40z" fill="#6fe3a5" opacity=".92"/>
+    </g>
+    <path d="M72 270c92-28 190-30 286-6s144 30 204 4" stroke="#ffffff" stroke-opacity=".48" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <circle cx="120" cy="270" r="14" fill="#ffffff" opacity=".94"/>
+    <circle cx="480" cy="268" r="14" fill="#ffd27d" opacity=".94"/>
+  </g>
+  <g transform="translate(894 218)">
+    <rect x="0" y="0" width="224" height="284" rx="34" fill="#ffffff" opacity=".12"/>
+    <g filter="url(#soft-shadow)"><rect x="28" y="48" width="168" height="168" rx="20" fill="#ffffff" opacity=".96"/><rect x="44.0" y="64.0" width="26.0" height="26.0" rx="8" fill="#153b33"/><rect x="170.0" y="64.0" width="26.0" height="26.0" rx="8" fill="#153b33"/><rect x="44.0" y="190.0" width="26.0" height="26.0" rx="8" fill="#153b33"/><rect x="107.0" y="85.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="128.0" y="106.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="107.0" y="127.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="149.0" y="127.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="86.0" y="148.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="128.0" y="148.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="149.0" y="169.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="107.0" y="190.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="149.0" y="190.0" width="5.0" height="5.0" rx="8" fill="#153b33"/><rect x="107.0" y="169.0" width="5.0" height="5.0" rx="8" fill="#153b33"/></g>
+    <rect x="28" y="236" width="112" height="14" rx="7" fill="#ffffff" opacity=".24"/>
+    <rect x="28" y="260" width="160" height="12" rx="6" fill="#ffffff" opacity=".16"/>
+    <rect x="264" y="0" width="188" height="132" rx="28" fill="#ffffff" opacity=".12"/>
+    <rect x="264" y="154" width="188" height="132" rx="28" fill="#ffffff" opacity=".12"/>
+    <rect x="292" y="32" width="114" height="14" rx="7" fill="#ffffff" opacity=".22"/>
+    <rect x="292" y="74" width="28" height="34" rx="18" fill="#ffffff" opacity="0.92"/><rect x="334" y="52" width="28" height="56" rx="18" fill="#ffffff" opacity="0.72"/><rect x="376" y="38" width="28" height="70" rx="18" fill="#ffffff" opacity="0.52"/>
+    <path d="M298 232c34-46 78-66 134-70" stroke="#ffffff" stroke-opacity=".84" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M298 232c40-18 82-10 136 28" stroke="#ffd27d" stroke-width="10" stroke-linecap="round" fill="none"/>
+  </g>
+  
+    <g filter="url(#soft-shadow)">
+      <circle cx="1332" cy="876" r="94" fill="#ffa440"/>
+      <circle cx="1332" cy="876" r="67" fill="#ffd2a0" opacity=".62"/>
+      <path d="M1324 780c18-32 62-44 98-18-16 34-46 54-88 58-16-12-20-24-10-40z" fill="#68df96" opacity=".92"/>
+    </g>
+  
+    <g filter="url(#soft-shadow)">
+      <circle cx="1184" cy="958" r="66" fill="#ff5b8b"/>
+      <circle cx="1184" cy="958" r="47" fill="#ffc3d4" opacity=".62"/>
+      <path d="M1176 890c18-32 62-44 98-18-16 34-46 54-88 58-16-12-20-24-10-40z" fill="#67db91" opacity=".92"/>
+    </g>
+  
+    <g filter="url(#soft-shadow)">
+      <rect x="1112" y="920" width="286" height="46" rx="23" fill="rgba(255,255,255,.18)" opacity=".94"/>
+      <text x="1136" y="950" class="small" fill="#ffffff">Trusted by supply chains</text>
+    </g>
+
+</svg>

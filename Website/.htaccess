@@ -1,0 +1,16 @@
+RewriteEngine On
+DirectorySlash Off
+
+AddDefaultCharset UTF-8
+
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%1]
+
+# Route dashboard namespace to app router before directory fallback (XAMPP has a /dashboard folder).
+RewriteRule ^dashboard(?:/.*)?$ index.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^ index.php [L,QSA]

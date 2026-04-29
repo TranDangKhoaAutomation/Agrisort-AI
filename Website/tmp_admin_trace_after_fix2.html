@@ -1,0 +1,249 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản trị truy xuất chuỗi cung ứng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Merriweather:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost/public/css/app.css">
+</head>
+<body class="app-layout">
+<div class="app-shell">
+  <aside class="app-sidebar" data-app-sidebar>
+    <div class="app-sidebar-head">
+      <a class="app-brand" href="http://localhost/dashboard">AGRISORT-AI</a>
+      <button type="button" class="app-sidebar-close" data-app-sidebar-close aria-label="Đóng menu">x</button>
+    </div>
+
+    <p class="app-sidebar-kicker">Không gian làm việc</p>
+    <nav class="app-side-nav">
+              <a href="http://localhost/dashboard" class="">
+          Bảng điều khiển        </a>
+              <a href="http://localhost/blog" class="">
+          Bài viết        </a>
+              <a href="http://localhost/docs" class="">
+          Tài liệu        </a>
+              <a href="http://localhost/account" class="">
+          Tài khoản        </a>
+              <a href="http://localhost/admin/trace" class="is-active">
+          Admin truy xuất        </a>
+          </nav>
+
+    <div class="app-sidebar-footer">
+      <a href="http://localhost" class="btn secondary">Xem trang giới thiệu</a>
+      <form method="post" accept-charset="UTF-8" action="http://localhost/auth/logout" class="app-logout-form">
+        <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">        <button type="submit" class="btn danger">Đăng xuất</button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="app-content">
+    <header class="app-topbar">
+      <div class="app-topbar-left">
+        <button type="button" class="app-sidebar-toggle" data-app-sidebar-toggle aria-label="Mở menu">Menu</button>
+        <div class="app-topbar-title-wrap">
+          <p class="app-topbar-kicker">Khu nội bộ</p>
+          <h1 class="app-topbar-title">Quản trị truy xuất chuỗi cung ứng</h1>
+        </div>
+      </div>
+      <div class="app-topbar-right">
+        <span class="app-user-chip">System Admin - Quan tri</span>
+        <a href="http://localhost" class="btn secondary app-public-link">Trang chủ</a>
+        <a href="http://localhost/en?redirect=%2Fadmin%2Ftrace" class="lang-toggle app-lang-toggle">EN</a>
+      </div>
+    </header>
+
+    <main class="site-main app-main">
+      <div class="container flash-wrap">
+                      </div>
+<section class="container page-section trace-admin-page" data-reveal>
+  <div class="section-head section-head-inline">
+    <p class="section-kicker">Trung tâm truy xuất quản trị</p>
+    <h1>Quản trị truy xuất chuỗi cung ứng</h1>
+  </div>
+      <p class="status-pill"><strong>Da khoi tao du lieu truy xuat tu lo/kien hien co.</strong></p>
+  
+  <article class="card">
+    <h2>Duyệt actor đang chờ</h2>
+          <p class="muted">Không có actor đang chờ duyệt.</p>
+      </article>
+
+  <div class="grid-2">
+    <article class="card">
+      <h2>Phân công chặng</h2>
+      <form method="post" accept-charset="UTF-8" action="http://localhost/admin/trace/assignments" class="form-card">
+        <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">        <label>
+          Loại thực thể          <select name="entity_type" required>
+            <option value="lot">Lô</option>
+            <option value="package">Kiện</option>
+          </select>
+        </label>
+        <label>
+          Entity ID          <input type="number" name="entity_id" min="1" required>
+        </label>
+        <label>
+          Mã chặng          <input type="text" name="stage_code" placeholder="warehouse-received" required>
+        </label>
+        <label>
+          Actor          <select name="actor_user_id" required>
+                          <option value="2">
+                #2 - AGRISORT Sample Partner (Nong dan)
+              </option>
+                      </select>
+        </label>
+        <button type="submit" class="btn primary">Lưu phân công</button>
+      </form>
+
+      <div class="trace-id-list">
+        <p class="trace-id-label">Danh sách ID lô có sẵn</p>
+        <div class="trace-id-row">
+                                    <span class="trace-id-chip">#4 (LOT-ORANGE-001)</span>
+                          <span class="trace-id-chip">#5 (LOT-BANANA-001)</span>
+                          <span class="trace-id-chip">#1 (LOT-MANGO-001)</span>
+                          <span class="trace-id-chip">#2 (LOT-AVOCADO-001)</span>
+                          <span class="trace-id-chip">#3 (LOT-DRAGON-001)</span>
+                              </div>
+      </div>
+
+      <div class="trace-id-list">
+        <p class="trace-id-label">Danh sách ID kiện có sẵn</p>
+        <div class="trace-id-row">
+                                    <span class="trace-id-chip">#1 (admin123)</span>
+                              </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Danh sách phân công</h2>
+              <div class="card-list">
+                      <article class="card trace-assignment-item">
+              <p><strong>#1</strong> lot / lot-created</p>
+              <p>Đối tượng: 4 (LOT-ORANGE-001)</p>
+              <p>Actor: AGRISORT Sample Partner (partner)</p>
+              <form method="post" accept-charset="UTF-8" action="http://localhost/admin/trace/assignments/1">
+                <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">                <input type="hidden" name="_method" value="DELETE">                <button type="submit" class="btn danger">Xóa phân công</button>
+              </form>
+            </article>
+                      <article class="card trace-assignment-item">
+              <p><strong>#2</strong> lot / lot-created</p>
+              <p>Đối tượng: 5 (LOT-BANANA-001)</p>
+              <p>Actor: AGRISORT Sample Partner (partner)</p>
+              <form method="post" accept-charset="UTF-8" action="http://localhost/admin/trace/assignments/2">
+                <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">                <input type="hidden" name="_method" value="DELETE">                <button type="submit" class="btn danger">Xóa phân công</button>
+              </form>
+            </article>
+                      <article class="card trace-assignment-item">
+              <p><strong>#3</strong> lot / lot-created</p>
+              <p>Đối tượng: 1 (LOT-MANGO-001)</p>
+              <p>Actor: AGRISORT Sample Partner (partner)</p>
+              <form method="post" accept-charset="UTF-8" action="http://localhost/admin/trace/assignments/3">
+                <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">                <input type="hidden" name="_method" value="DELETE">                <button type="submit" class="btn danger">Xóa phân công</button>
+              </form>
+            </article>
+                      <article class="card trace-assignment-item">
+              <p><strong>#4</strong> lot / lot-created</p>
+              <p>Đối tượng: 2 (LOT-AVOCADO-001)</p>
+              <p>Actor: AGRISORT Sample Partner (partner)</p>
+              <form method="post" accept-charset="UTF-8" action="http://localhost/admin/trace/assignments/4">
+                <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">                <input type="hidden" name="_method" value="DELETE">                <button type="submit" class="btn danger">Xóa phân công</button>
+              </form>
+            </article>
+                      <article class="card trace-assignment-item">
+              <p><strong>#5</strong> lot / lot-created</p>
+              <p>Đối tượng: 3 (LOT-DRAGON-001)</p>
+              <p>Actor: AGRISORT Sample Partner (partner)</p>
+              <form method="post" accept-charset="UTF-8" action="http://localhost/admin/trace/assignments/5">
+                <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">                <input type="hidden" name="_method" value="DELETE">                <button type="submit" class="btn danger">Xóa phân công</button>
+              </form>
+            </article>
+                      <article class="card trace-assignment-item">
+              <p><strong>#6</strong> package / package-created</p>
+              <p>Đối tượng: 1 (admin123)</p>
+              <p>Actor: AGRISORT Sample Partner (partner)</p>
+              <form method="post" accept-charset="UTF-8" action="http://localhost/admin/trace/assignments/6">
+                <input type="hidden" name="_token" value="44bf278b9508dc41a58051806c8b852ca0a1c43c0372cd8b9a9dd72fe3a4c653">                <input type="hidden" name="_method" value="DELETE">                <button type="submit" class="btn danger">Xóa phân công</button>
+              </form>
+            </article>
+                  </div>
+          </article>
+  </div>
+
+  <article class="card">
+    <h2>Timeline toàn hệ thống</h2>
+          <div class="table-shell">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Thực thể</th>
+              <th>Chặng</th>
+              <th>Thời gian</th>
+              <th>Địa điểm</th>
+              <th>Actor</th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>6</td>
+                <td>package #1</td>
+                <td>package-created</td>
+                <td>2026-02-28 09:44:00</td>
+                <td>Packaging</td>
+                <td>AGRISORT Sample Partner</td>
+              </tr>
+                          <tr>
+                <td>2</td>
+                <td>lot #5</td>
+                <td>lot-created</td>
+                <td>2026-02-27 10:34:07</td>
+                <td>Tây Ninh</td>
+                <td>AGRISORT Sample Partner</td>
+              </tr>
+                          <tr>
+                <td>1</td>
+                <td>lot #4</td>
+                <td>lot-created</td>
+                <td>2026-02-27 10:34:07</td>
+                <td>Vĩnh Long</td>
+                <td>AGRISORT Sample Partner</td>
+              </tr>
+                          <tr>
+                <td>5</td>
+                <td>lot #3</td>
+                <td>lot-created</td>
+                <td>2026-02-27 10:34:06</td>
+                <td>Bình Thuận</td>
+                <td>AGRISORT Sample Partner</td>
+              </tr>
+                          <tr>
+                <td>4</td>
+                <td>lot #2</td>
+                <td>lot-created</td>
+                <td>2026-02-27 10:34:06</td>
+                <td>Lâm Đồng</td>
+                <td>AGRISORT Sample Partner</td>
+              </tr>
+                          <tr>
+                <td>3</td>
+                <td>lot #1</td>
+                <td>lot-created</td>
+                <td>2026-02-27 10:34:06</td>
+                <td>Đồng Tháp</td>
+                <td>AGRISORT Sample Partner</td>
+              </tr>
+                      </tbody>
+        </table>
+      </div>
+      </article>
+</section>
+    </main>
+  </div>
+  <button type="button" class="app-sidebar-backdrop" data-app-sidebar-backdrop aria-hidden="true"></button>
+</div>
+<script src="http://localhost/public/vendor/jsQR.js"></script>
+<script src="http://localhost/public/js/app.js"></script>
+</body>
+</html>
+

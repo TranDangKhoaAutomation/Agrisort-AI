@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài khoản</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost/public/css/app.css">
+</head>
+<body class="app-layout">
+<div class="app-shell">
+  <aside class="app-sidebar" data-app-sidebar>
+    <div class="app-sidebar-head">
+      <a class="app-brand" href="http://localhost/dashboard">AGRISORT-AI</a>
+      <button type="button" class="app-sidebar-close" data-app-sidebar-close aria-label="Đóng menu">x</button>
+    </div>
+
+    <p class="app-sidebar-kicker">Không gian làm việc</p>
+    <nav class="app-side-nav">
+              <a href="http://localhost/dashboard" class="">
+          Bảng điều khiển        </a>
+              <a href="http://localhost/blog" class="">
+          Bài viết        </a>
+              <a href="http://localhost/docs" class="">
+          Tài liệu        </a>
+              <a href="http://localhost/account" class="is-active">
+          Tài khoản        </a>
+              <a href="http://localhost/admin/trace" class="">
+          Admin truy xuất        </a>
+          </nav>
+
+    <div class="app-sidebar-footer">
+      <a href="http://localhost" class="btn secondary">Xem trang giới thiệu</a>
+      <form method="post" accept-charset="UTF-8" action="http://localhost/auth/logout" class="app-logout-form">
+        <input type="hidden" name="_token" value="f9c7e57d4249087b157fc6e8f1022fec63adc32131373a2ba7655e795ab50f60">        <button type="submit" class="btn danger">Đăng xuất</button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="app-content">
+    <header class="app-topbar">
+      <div class="app-topbar-left">
+        <button type="button" class="app-sidebar-toggle" data-app-sidebar-toggle aria-label="Mở menu">Menu</button>
+        <div class="app-topbar-title-wrap">
+          <p class="app-topbar-kicker">Khu nội bộ</p>
+          <h1 class="app-topbar-title">Tài khoản</h1>
+        </div>
+      </div>
+      <div class="app-topbar-right">
+        <span class="app-user-chip">System Admin - Quan tri</span>
+        <a href="http://localhost" class="btn secondary app-public-link">Trang chủ</a>
+        <a href="http://localhost/en?redirect=%2Faccount" class="lang-toggle app-lang-toggle">EN</a>
+      </div>
+    </header>
+
+    <main class="site-main app-main">
+      <div class="container flash-wrap">
+                      </div>
+
+<section class="container page-section account-shell">
+  <article class="card account-hero">
+    <div class="avatar-initials">SA</div>
+    <div class="account-hero-content">
+      <p class="section-kicker">Quản lý tài khoản</p>
+      <h1>System Admin</h1>
+      <p>admin@agrisort.local</p>
+      <span class="status-pill">Vai trò: <strong>Quan tri</strong></span>
+    </div>
+  </article>
+
+  <div class="account-grid">
+    <article class="card account-card">
+      <h2>Thông tin tài khoản</h2>
+      <p class="muted">Nếu đổi email, hệ thống sẽ yêu cầu đăng nhập lại.</p>
+
+      <form method="post" accept-charset="UTF-8" action="http://localhost/account/profile" class="form-card">
+        <input type="hidden" name="_token" value="f9c7e57d4249087b157fc6e8f1022fec63adc32131373a2ba7655e795ab50f60">        <label>
+          Họ tên          <input type="text" name="full_name" required value="System Admin">
+        </label>
+        <label>
+          Email đăng nhập          <input type="email" name="email" required value="admin@agrisort.local">
+        </label>
+
+        
+        <button type="submit" class="btn primary">Lưu thông tin</button>
+      </form>
+    </article>
+
+    <article class="card account-card">
+      <h2>Đổi mật khẩu</h2>
+      <form method="post" accept-charset="UTF-8" action="http://localhost/account/password" class="form-card">
+        <input type="hidden" name="_token" value="f9c7e57d4249087b157fc6e8f1022fec63adc32131373a2ba7655e795ab50f60">        <label>
+          Mật khẩu hiện tại          <input type="password" name="current_password" required>
+        </label>
+        <label>
+          Mật khẩu mới          <input type="password" name="password" required>
+        </label>
+        <label>
+          Xác nhận mật khẩu mới          <input type="password" name="password_confirmation" required>
+        </label>
+        <button type="submit" class="btn secondary">Cập nhật mật khẩu</button>
+      </form>
+    </article>
+  </div>
+</section>
+
+    </main>
+  </div>
+  <button type="button" class="app-sidebar-backdrop" data-app-sidebar-backdrop aria-hidden="true"></button>
+</div>
+<script src="http://localhost/public/vendor/jsQR.js"></script>
+<script src="http://localhost/public/js/app.js"></script>
+</body>
+</html>

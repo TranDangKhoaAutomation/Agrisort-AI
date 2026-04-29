@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-label="Capability illustration for operational impact">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c6b54"/>
+      <stop offset="100%" stop-color="#ff8a56"/>
+    </linearGradient>
+    <linearGradient id="accentA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#57df92"/>
+      <stop offset="100%" stop-color="#ffbb49"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,.30)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,.08)"/>
+    </linearGradient>
+    <filter id="blur-lg" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#101938" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#121b3d" flood-opacity=".12"/>
+    </filter>
+    <style>
+    .title { font: 800 44px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.96); letter-spacing: .04em; }
+    .eyebrow { font: 700 18px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.82); letter-spacing: .18em; text-transform: uppercase; }
+    .label { font: 700 20px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.9); }
+    .small { font: 600 16px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.74); }
+</style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <circle cx="1450" cy="140" r="250" fill="#ffd29f" opacity=".42" filter="url(#blur-lg)"/>
+  <circle cx="220" cy="1040" r="300" fill="#80f1ca" opacity=".30" filter="url(#blur-lg)"/>
+  <circle cx="1120" cy="920" r="180" fill="#ffffff" opacity=".08" filter="url(#blur-lg)"/>
+  <g opacity=".12" stroke="#ffffff" fill="none">
+    <path d="M70 180c160-60 320-74 470-18s316 68 520 8 332-58 470 8"/>
+    <path d="M20 248c186-76 378-90 570-24s390 74 574 10 316-66 436-26"/>
+    <path d="M84 1034c220-76 388-86 542-22s338 74 544 14 310-66 424-26"/>
+  </g>
+  
+  <g filter="url(#shadow)"><rect x="126" y="150" width="1348" height="820" rx="54" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.24"/></g>
+  <text x="188" y="242" class="eyebrow">IMPACT</text>
+  <text x="188" y="316" class="title">Visible business gain</text>
+  <g transform="translate(180 394)">
+    <rect x="0" y="0" width="560" height="458" rx="44" fill="#ffffff" opacity=".10"/>
+    <rect x="42" y="44" width="188" height="142" rx="30" fill="#ffffff" opacity=".14"/>
+    <rect x="252" y="44" width="266" height="142" rx="30" fill="#ffffff" opacity=".14"/>
+    <rect x="42" y="214" width="476" height="202" rx="34" fill="#ffffff" opacity=".12"/>
+    <rect x="70" y="330" width="54" height="62" rx="18" fill="#ffffff" opacity="0.96"/><rect x="150" y="286" width="54" height="106" rx="18" fill="#ffffff" opacity="0.8"/><rect x="230" y="244" width="54" height="148" rx="18" fill="#ffffff" opacity="0.64"/><rect x="310" y="204" width="54" height="188" rx="18" fill="#ffffff" opacity="0.86"/>
+    <path d="M78 256c88-64 158-84 264-76s144 38 184 6" stroke="#8af3cd" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <circle cx="526" cy="104" r="36" fill="#8af3cd" opacity=".96"/>
+    <path d="M510 106l12 12 24-30" stroke="#0d5e49" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <g transform="translate(836 436)">
+    <rect x="0" y="0" width="520" height="346" rx="40" fill="#ffffff" opacity=".12"/>
+    <path d="M54 246c74-80 140-118 216-120s132 24 202-30" stroke="#ffffff" stroke-opacity=".88" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M54 246c76-32 154-24 250 26 98 50 146 52 190 26" stroke="#ffd27d" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <circle cx="54" cy="246" r="20" fill="#ffffff"/>
+    <circle cx="472" cy="96" r="20" fill="#8af3cd"/>
+    <circle cx="494" cy="298" r="18" fill="#ffd27d"/>
+  </g>
+
+</svg>

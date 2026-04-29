@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost/public/css/app.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="http://localhost">AGRISORT-AI</a>
+    <nav class="main-nav">
+      <a href="http://localhost">Trang chủ</a>
+              <a href="http://localhost/blog">Bài viết</a>
+        <a href="http://localhost/docs">Tài liệu</a>
+        <a href="http://localhost/trace">Quét QR truy xuất</a>
+        <a href="http://localhost/en?redirect=%2Fauth%2Flogin" class="lang-toggle">EN</a>
+        <a href="http://localhost/auth/login">Đăng nhập</a>
+          </nav>
+  </div>
+</header>
+<main class="site-main">
+  <div class="container flash-wrap">
+          </div>
+
+<section class="container page-section auth-shell">
+  <div class="auth-showcase card">
+    <p class="section-kicker">Hệ thống tài khoản</p>
+    <h1>Đăng nhập và quản trị dữ liệu truy xuất</h1>
+    <p>Quản lý lô hàng, QR, và chuỗi vận chuyển trong một giao diện.</p>
+    <div class="auth-benefits">
+      <span>Bảo mật đăng nhập</span>
+      <span>Phân quyền vai trò</span>
+      <span>Duyệt tài khoản bởi admin</span>
+    </div>
+  </div>
+
+  <article class="card auth-card auth-card-single">
+          <h2>Đăng nhập</h2>
+      <form method="post" accept-charset="UTF-8" action="http://localhost/auth/login" class="form-card">
+        <input type="hidden" name="_token" value="d664dd63d05af9e9a7800c0dc3271b28e020ac5a578b806b07d1398cd1167a0e">        <label>Email <input type="email" name="email" required value=""></label>
+        <label>Mật khẩu <input type="password" name="password" required></label>
+        <button type="submit" class="btn primary">Đăng nhập</button>
+      </form>
+
+      <h3>Quên mật khẩu</h3>
+      <form method="post" accept-charset="UTF-8" action="http://localhost/auth/forgot-password" class="form-card compact">
+        <input type="hidden" name="_token" value="d664dd63d05af9e9a7800c0dc3271b28e020ac5a578b806b07d1398cd1167a0e">        <label>Email <input type="email" name="email" required></label>
+        <button type="submit" class="btn secondary">Gửi link đặt lại</button>
+      </form>
+
+      <a class="auth-mode-link" href="http://localhost/auth/login?mode=register">
+        Chưa có tài khoản? Đăng ký ngay      </a>
+      </article>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>AGRISORT-AI - Giải pháp Việt cho nông nghiệp thông minh</p>
+    <small class="footer-note">Nền tảng truy xuất và quản trị nông sản thông minh.</small>
+  </div>
+</footer>
+<script src="http://localhost/public/vendor/jsQR.js"></script>
+<script src="http://localhost/public/js/app.js"></script>
+</body>
+</html>
+
+
+
+
+

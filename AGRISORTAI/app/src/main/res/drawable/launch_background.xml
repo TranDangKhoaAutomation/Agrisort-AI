@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/launch_background_solid" />
+    <item
+        android:bottom="160dp"
+        android:left="48dp"
+        android:right="48dp"
+        android:top="160dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/agrisort_logo" />
+    </item>
+</layer-list>

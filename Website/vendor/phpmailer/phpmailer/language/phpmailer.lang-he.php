@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Hebrew PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author Ronny Sherer <ronny@hoojima.com>
+ */
+
+$PHPMAILER_LANG['authenticate']         = '×©×’×™××ª SMTP: ×¤×¢×•×œ×ª ×”××™×ž×•×ª × ×›×©×œ×”.';
+$PHPMAILER_LANG['connect_host']         = '×©×’×™××ª SMTP: ×œ× ×”×¦×œ×—×ª×™ ×œ×”×ª×—×‘×¨ ×œ×©×¨×ª SMTP.';
+$PHPMAILER_LANG['data_not_accepted']    = '×©×’×™××ª SMTP: ×ž×™×“×¢ ×œ× ×”×ª×§×‘×œ.';
+$PHPMAILER_LANG['empty_message']        = '×’×•×£ ×”×”×•×“×¢×” ×¨×™×§';
+$PHPMAILER_LANG['invalid_address']      = '×›×ª×•×‘×ª ×©×’×•×™×”: ';
+$PHPMAILER_LANG['encoding']             = '×§×™×“×•×“ ×œ× ×ž×•×›×¨: ';
+$PHPMAILER_LANG['execute']              = '×œ× ×”×¦×œ×—×ª×™ ×œ×”×¤×¢×™×œ ××ª: ';
+$PHPMAILER_LANG['file_access']          = '×œ× × ×™×ª×Ÿ ×œ×’×©×ª ×œ×§×•×‘×¥: ';
+$PHPMAILER_LANG['file_open']            = '×©×’×™××ª ×§×•×‘×¥: ×œ× × ×™×ª×Ÿ ×œ×’×©×ª ×œ×§×•×‘×¥: ';
+$PHPMAILER_LANG['from_failed']          = '×›×ª×•×‘×•×ª ×”× ×ž×¢× ×™× ×”×‘××•×ª × ×›×©×œ×•: ';
+$PHPMAILER_LANG['instantiate']          = '×œ× ×”×¦×œ×—×ª×™ ×œ×”×¤×¢×™×œ ××ª ×¤×•× ×§×¦×™×™×ª ×”×ž×™×™×œ.';
+$PHPMAILER_LANG['mailer_not_supported'] = ' ××™× ×” × ×ª×ž×›×ª.';
+$PHPMAILER_LANG['provide_address']      = '×—×•×‘×” ×œ×¡×¤×§ ×œ×¤×—×•×ª ×›×ª×•×‘×ª ××—×ª ×©×œ ×ž×§×‘×œ ×”×ž×™×™×œ.';
+$PHPMAILER_LANG['recipients_failed']    = '×©×’×™××ª SMTP: ×”× ×ž×¢× ×™× ×”×‘××™× × ×›×©×œ×•: ';
+$PHPMAILER_LANG['signing']              = '×©×’×™××ª ×—×ª×™×ž×”: ';
+$PHPMAILER_LANG['smtp_connect_failed']  = 'SMTP Connect() failed.';
+$PHPMAILER_LANG['smtp_error']           = '×©×’×™××ª ×©×¨×ª SMTP: ';
+$PHPMAILER_LANG['variable_set']         = '×œ× × ×™×ª×Ÿ ×œ×§×‘×•×¢ ××• ×œ×©× ×•×ª ××ª ×”×ž×©×ª× ×”: ';
+//$PHPMAILER_LANG['extension_missing']    = 'Extension missing: ';

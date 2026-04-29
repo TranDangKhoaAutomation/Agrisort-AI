@@ -1,0 +1,28 @@
+﻿Demo images downloaded on 2026-03-22
+Source pages and licenses:
+- mango-demo.jpg: Mangoes ,, (Wikimedia Commons, CC BY-SA 4.0)
+  https://commons.wikimedia.org/wiki/File:Mangoes_,,.jpg
+- mango-harvest-demo.jpg: Mango picking (Wikimedia Commons, CC BY-SA 3.0 / 2.5 / 2.0 / 1.0, GFDL)
+  https://commons.wikimedia.org/wiki/File:Mango_picking.JPG
+- dragonfruit-demo.jpg: Dragonfruit Chiayi market (Wikimedia Commons, CC BY-SA 2.0)
+  https://commons.wikimedia.org/wiki/File:Dragonfruit_Chiayi_market.jpg
+- red-dragonfruit-market-demo.jpg: Red Dragon Fruit Brisbane Wednesday Markets-1 (Wikimedia Commons, CC BY-SA 2.0)
+  https://commons.wikimedia.org/wiki/File:Red_Dragon_Fruit_Brisbane_Wednesday_Markets-1_(17912393935).jpg
+- orange-demo.jpg: Citrus sinensis (Wikimedia Commons, public domain)
+  https://commons.wikimedia.org/wiki/File:Citrus_sinensis.jpg
+- avocado-demo.jpg: Avocado fruitnfoliage (Wikimedia Commons, CC BY 1.0)
+  https://commons.wikimedia.org/wiki/File:Avocado_fruitnfoliage.jpg
+- avocado-harvest-demo.jpg: Avocado harvest 03 (Wikimedia Commons, CC BY-SA 4.0)
+  https://commons.wikimedia.org/wiki/File:Avocado_harvest_03.jpg
+- avocado-tree-multi-demo.jpg: Avocado tree with multiple fruits (Wikimedia Commons, CC0)
+  https://commons.wikimedia.org/wiki/File:Avocado_tree_with_multiple_fruits.jpg
+- banana-demo.jpg: Bananas fruit (1) (Wikimedia Commons, public domain)
+  https://commons.wikimedia.org/wiki/File:Bananas_fruit_(1).jpg
+- banana-tree-demo.jpg: Bananas fruit (Wikimedia Commons, public domain)
+  https://commons.wikimedia.org/wiki/File:Bananas_fruit.jpg
+- banana-plantation-demo.jpg: Photo of a banana plantation (Wikimedia Commons, CC BY-SA 4.0)
+  https://commons.wikimedia.org/wiki/File:Photo_of_a_banana_plantation.jpg
+- market-cart-demo.jpg: Bananas mangoes Peru market cart (Wikimedia Commons, CC BY 2.0)
+  https://commons.wikimedia.org/wiki/File:Bananas_mangoes_Peru_market_cart.jpg
+- packinghouse-demo.jpg: Afghan fruit processing plant (Wikimedia Commons, public domain / USAID)
+  https://commons.wikimedia.org/wiki/File:Afghan_fruit_processing_plant.jpg

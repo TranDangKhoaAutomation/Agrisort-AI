@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng điều khiển quản trị</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost/public/css/app.css">
+</head>
+<body class="app-layout">
+<div class="app-shell">
+  <aside class="app-sidebar" data-app-sidebar>
+    <div class="app-sidebar-head">
+      <a class="app-brand" href="http://localhost/dashboard">AGRISORT-AI</a>
+      <button type="button" class="app-sidebar-close" data-app-sidebar-close aria-label="Đóng menu">x</button>
+    </div>
+
+    <p class="app-sidebar-kicker">Không gian làm việc</p>
+    <nav class="app-side-nav">
+              <a href="http://localhost/dashboard" class="is-active">
+          Bảng điều khiển        </a>
+              <a href="http://localhost/blog" class="">
+          Bài viết        </a>
+              <a href="http://localhost/docs" class="">
+          Tài liệu        </a>
+              <a href="http://localhost/account" class="">
+          Tài khoản        </a>
+              <a href="http://localhost/admin/trace" class="">
+          Admin truy xuất        </a>
+          </nav>
+
+    <div class="app-sidebar-footer">
+      <a href="http://localhost" class="btn secondary">Xem trang giới thiệu</a>
+      <form method="post" accept-charset="UTF-8" action="http://localhost/auth/logout" class="app-logout-form">
+        <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">        <button type="submit" class="btn danger">Đăng xuất</button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="app-content">
+    <header class="app-topbar">
+      <div class="app-topbar-left">
+        <button type="button" class="app-sidebar-toggle" data-app-sidebar-toggle aria-label="Mở menu">Menu</button>
+        <div class="app-topbar-title-wrap">
+          <p class="app-topbar-kicker">Khu nội bộ</p>
+          <h1 class="app-topbar-title">Bảng điều khiển quản trị</h1>
+        </div>
+      </div>
+      <div class="app-topbar-right">
+        <span class="app-user-chip">System Admin - Quan tri</span>
+        <a href="http://localhost" class="btn secondary app-public-link">Trang chủ</a>
+        <a href="http://localhost/en?redirect=%2Fadmin%2Fdashboard" class="lang-toggle app-lang-toggle">EN</a>
+      </div>
+    </header>
+
+    <main class="site-main app-main">
+      <div class="container flash-wrap">
+                      </div>
+<section class="container page-section">
+  <div class="section-head section-head-inline">
+    <p class="section-kicker">Trung tâm điều hành</p>
+    <h1>Bảng điều khiển quản trị</h1>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi"><strong>0</strong><span>Đối tác chờ duyệt</span></div>
+    <div class="kpi"><strong>1</strong><span>Đối tác hoạt động</span></div>
+    <div class="kpi"><strong>5</strong><span>Tổng số lô</span></div>
+    <div class="kpi"><strong>5</strong><span>Lô đã công khai</span></div>
+    <div class="kpi"><strong>0</strong><span>Tổng lead</span></div>
+    <div class="kpi"><strong>3</strong><span>Bài đã xuất bản</span></div>
+  </div>
+
+  <article class="card" id="partners">
+    <h2>Duyệt đối tác</h2>
+          <table class="table">
+        <thead><tr><th>ID</th><th>Họ tên</th><th>Email</th><th>Tổ chức</th><th>Trạng thái</th><th>Hành động</th></tr></thead>
+        <tbody>
+                  <tr>
+            <td>2</td>
+            <td>AGRISORT Sample Partner</td>
+            <td>partner.sample@agrisort.local</td>
+            <td>HTX Nông Sản Số Hóa UNETI</td>
+            <td>Hoạt động</td>
+            <td>
+              <form method="post" accept-charset="UTF-8" action="http://localhost/admin/partners/2/approve" class="inline-form">
+                <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">                <select name="status">
+                  <option value="active">Hoạt động</option>
+                  <option value="pending" >Chờ duyệt</option>
+                  <option value="suspended" >Tạm khóa</option>
+                </select>
+                <button type="submit" class="btn">Lưu</button>
+              </form>
+            </td>
+          </tr>
+                </tbody>
+      </table>
+      </article>
+
+  <article class="card" id="settings">
+    <h2>Cài đặt hệ thống</h2>
+    <form method="post" accept-charset="UTF-8" action="http://localhost/admin/settings" class="form-card">
+      <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">      <label>Tự động công khai lô        <select name="auto_publish_lot">
+          <option value="1" selected>1</option>
+          <option value="0" >0</option>
+        </select>
+      </label>
+      <label>SMTP host <input type="text" name="smtp_host" value="smtp.gmail.com"></label>
+      <label>SMTP port <input type="text" name="smtp_port" value="587"></label>
+      <label>SMTP user <input type="text" name="smtp_user" value=""></label>
+      <label>SMTP pass <input type="password" name="smtp_pass" value=""></label>
+      <label>SMTP from <input type="text" name="smtp_from" value="admin@agrisort.local"></label>
+      <label>QR base URL (domain/IP công khai) <input type="text" name="qr_base_url" value="" placeholder="https://your-domain.com"></label>
+      <label>Google Translate API key <input type="text" name="google_translate_api_key" value=""></label>
+      <button type="submit" class="btn primary">Lưu cài đặt</button>
+    </form>
+  </article>
+
+  <article class="card" id="apikey">
+    <h2>API key tích hợp máy phân loại</h2>
+    <form method="post" accept-charset="UTF-8" action="http://localhost/admin/api-keys" class="inline-form">
+      <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">      <input type="text" name="name" placeholder="Tên key (vd: PLC dây chuyền 1)" required>
+      <button type="submit" class="btn primary">Tạo API key</button>
+    </form>
+    <table class="table">
+      <thead><tr><th>ID</th><th>Tên</th><th>Trạng thái</th><th>Lần dùng cuối</th><th>Ngày tạo</th></tr></thead>
+      <tbody>
+            </tbody>
+    </table>
+  </article>
+
+  <article class="card" id="cms">
+    <h2>Quản lý nội dung landing (CMS)</h2>
+          <details class="cms-block">
+        <summary>hero</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/hero" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục hero</button>
+        </form>
+      </details>
+          <details class="cms-block">
+        <summary>solution</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/solution" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục solution</button>
+        </form>
+      </details>
+          <details class="cms-block">
+        <summary>technology</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/technology" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục technology</button>
+        </form>
+      </details>
+          <details class="cms-block">
+        <summary>impact</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/impact" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục impact</button>
+        </form>
+      </details>
+          <details class="cms-block">
+        <summary>swot</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/swot" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục swot</button>
+        </form>
+      </details>
+          <details class="cms-block">
+        <summary>roadmap</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/roadmap" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục roadmap</button>
+        </form>
+      </details>
+          <details class="cms-block">
+        <summary>team</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/team" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục team</button>
+        </form>
+      </details>
+          <details class="cms-block">
+        <summary>contact</summary>
+        <form method="post" accept-charset="UTF-8" action="http://localhost/admin/cms/contact" enctype="multipart/form-data" class="form-card">
+          <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">          <label>Tiêu đề tiếng Việt <input type="text" name="title_vi"></label>
+          <label>Nội dung tiếng Việt <textarea name="body_vi" rows="3"></textarea></label>
+          <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+          <label>Nội dung tiếng Anh <textarea name="body_en" rows="3"></textarea></label>
+          <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN từ nội dung VI</label>
+          <label>Ảnh minh họa <input type="file" name="image" accept="image/*"></label>
+          <button type="submit" class="btn secondary">Lưu mục contact</button>
+        </form>
+      </details>
+      </article>
+
+  <article class="card" id="blog">
+    <h2>Quản lý Blog</h2>
+    <form method="post" accept-charset="UTF-8" action="http://localhost/admin/blog" enctype="multipart/form-data" class="form-card">
+      <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">      <label>ID (để trống nếu tạo mới) <input type="number" name="id" min="1"></label>
+      <label>Slug <input type="text" name="slug"></label>
+      <label>Tiêu đề tiếng Việt <input type="text" name="title_vi" required></label>
+      <label>Nội dung tiếng Việt <textarea name="content_vi" rows="6" required></textarea></label>
+      <label>Mô tả ngắn tiếng Việt <textarea name="excerpt_vi" rows="2"></textarea></label>
+      <label>Tiêu đề tiếng Anh <input type="text" name="title_en"></label>
+      <label>Nội dung tiếng Anh <textarea name="content_en" rows="6"></textarea></label>
+      <label>Mô tả ngắn tiếng Anh <textarea name="excerpt_en" rows="2"></textarea></label>
+      <label><input type="checkbox" name="auto_translate_en" value="1" checked> Tự dịch EN</label>
+      <label>SEO title <input type="text" name="seo_title"></label>
+      <label>SEO description <textarea name="seo_description" rows="2"></textarea></label>
+      <label>Trạng thái        <select name="status">
+          <option value="draft">Nháp</option>
+          <option value="published">Xuất bản</option>
+        </select>
+      </label>
+      <label>Ảnh đại diện <input type="file" name="thumbnail" accept="image/*"></label>
+      <button type="submit" class="btn primary">Lưu bài viết</button>
+    </form>
+
+    <table class="table">
+      <thead><tr><th>ID</th><th>Slug</th><th>Tiêu đề VI</th><th>Trạng thái</th><th>Ngày xuất bản</th></tr></thead>
+      <tbody>
+              <tr>
+          <td>3</td>
+          <td>agrisort-ai-market-roadmap</td>
+          <td>Lộ trình thị trường AGRISORT-AI cho HTX và cơ sở sơ chế</td>
+          <td>Xuất bản</td>
+          <td>2026-02-27 10:34:28</td>
+        </tr>
+              <tr>
+          <td>2</td>
+          <td>agrisort-ai-technical-profile</td>
+          <td>Hồ sơ kỹ thuật AGRISORT-AI: AI, điều khiển thời gian thực và QR truy xuất</td>
+          <td>Xuất bản</td>
+          <td>2026-02-27 10:34:28</td>
+        </tr>
+              <tr>
+          <td>1</td>
+          <td>agrisort-ai-launch</td>
+          <td>AGRISORT-AI ra mắt hệ thống phân loại nông sản thông minh</td>
+          <td>Xuất bản</td>
+          <td>2026-02-27 10:34:28</td>
+        </tr>
+            </tbody>
+    </table>
+  </article>
+
+  <article class="card" id="lots">
+    <h2>Toàn bộ lô hàng</h2>
+    <table class="table">
+      <thead><tr><th>ID</th><th>Mã lô</th><th>Đối tác</th><th>Trạng thái</th><th>QR</th><th>Hành động</th></tr></thead>
+      <tbody>
+              <tr>
+          <td>4</td>
+          <td>LOT-ORANGE-001</td>
+          <td>HTX Nông Sản Số Hóa UNETI</td>
+          <td>Đã công khai</td>
+          <td><a target="_blank" href="http://localhost/trace/agrisort-orange-001">agrisort-orange-001</a></td>
+          <td>
+            <form method="post" accept-charset="UTF-8" action="http://localhost/admin/lots/4/publish" class="inline-form">
+              <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">              <select name="publish_status">
+                <option value="draft" >Nháp</option>
+                <option value="published" selected>Đã công khai</option>
+              </select>
+              <button type="submit" class="btn">Lưu</button>
+            </form>
+          </td>
+        </tr>
+              <tr>
+          <td>5</td>
+          <td>LOT-BANANA-001</td>
+          <td>HTX Nông Sản Số Hóa UNETI</td>
+          <td>Đã công khai</td>
+          <td><a target="_blank" href="http://localhost/trace/agrisort-banana-001">agrisort-banana-001</a></td>
+          <td>
+            <form method="post" accept-charset="UTF-8" action="http://localhost/admin/lots/5/publish" class="inline-form">
+              <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">              <select name="publish_status">
+                <option value="draft" >Nháp</option>
+                <option value="published" selected>Đã công khai</option>
+              </select>
+              <button type="submit" class="btn">Lưu</button>
+            </form>
+          </td>
+        </tr>
+              <tr>
+          <td>1</td>
+          <td>LOT-MANGO-001</td>
+          <td>HTX Nông Sản Số Hóa UNETI</td>
+          <td>Đã công khai</td>
+          <td><a target="_blank" href="http://localhost/trace/agrisort-lot-001">agrisort-lot-001</a></td>
+          <td>
+            <form method="post" accept-charset="UTF-8" action="http://localhost/admin/lots/1/publish" class="inline-form">
+              <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">              <select name="publish_status">
+                <option value="draft" >Nháp</option>
+                <option value="published" selected>Đã công khai</option>
+              </select>
+              <button type="submit" class="btn">Lưu</button>
+            </form>
+          </td>
+        </tr>
+              <tr>
+          <td>2</td>
+          <td>LOT-AVOCADO-001</td>
+          <td>HTX Nông Sản Số Hóa UNETI</td>
+          <td>Đã công khai</td>
+          <td><a target="_blank" href="http://localhost/trace/agrisort-avocado-001">agrisort-avocado-001</a></td>
+          <td>
+            <form method="post" accept-charset="UTF-8" action="http://localhost/admin/lots/2/publish" class="inline-form">
+              <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">              <select name="publish_status">
+                <option value="draft" >Nháp</option>
+                <option value="published" selected>Đã công khai</option>
+              </select>
+              <button type="submit" class="btn">Lưu</button>
+            </form>
+          </td>
+        </tr>
+              <tr>
+          <td>3</td>
+          <td>LOT-DRAGON-001</td>
+          <td>HTX Nông Sản Số Hóa UNETI</td>
+          <td>Đã công khai</td>
+          <td><a target="_blank" href="http://localhost/trace/agrisort-dragonfruit-001">agrisort-dragonfruit-001</a></td>
+          <td>
+            <form method="post" accept-charset="UTF-8" action="http://localhost/admin/lots/3/publish" class="inline-form">
+              <input type="hidden" name="_token" value="c9dcb713c99251b7b8b4160fd15bd0ae8dfa8179f13fb1f4c05e86bcd3f83546">              <select name="publish_status">
+                <option value="draft" >Nháp</option>
+                <option value="published" selected>Đã công khai</option>
+              </select>
+              <button type="submit" class="btn">Lưu</button>
+            </form>
+          </td>
+        </tr>
+            </tbody>
+    </table>
+  </article>
+
+  <article class="card">
+    <h2>Lead liên hệ</h2>
+    <table class="table">
+      <thead><tr><th>ID</th><th>Họ tên</th><th>Email</th><th>Tiêu đề</th><th>Ngày tạo</th></tr></thead>
+      <tbody>
+            </tbody>
+    </table>
+  </article>
+
+  <article class="card">
+    <h2>Lead đăng ký tư vấn</h2>
+    <table class="table">
+      <thead><tr><th>ID</th><th>Họ tên</th><th>Tổ chức</th><th>Email</th><th>Ngày tạo</th></tr></thead>
+      <tbody>
+            </tbody>
+    </table>
+  </article>
+</section>
+    </main>
+  </div>
+  <button type="button" class="app-sidebar-backdrop" data-app-sidebar-backdrop aria-hidden="true"></button>
+</div>
+<script src="http://localhost/public/vendor/jsQR.js"></script>
+<script src="http://localhost/public/js/app.js"></script>
+</body>
+</html>

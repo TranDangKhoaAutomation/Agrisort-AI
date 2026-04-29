@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-label="AGRISORT login illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b6f57"/>
+      <stop offset="100%" stop-color="#4b88ff"/>
+    </linearGradient>
+    <linearGradient id="accentA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c994"/>
+      <stop offset="100%" stop-color="#5f7dff"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,.30)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,.08)"/>
+    </linearGradient>
+    <filter id="blur-lg" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#101938" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#121b3d" flood-opacity=".12"/>
+    </filter>
+    <style>
+    .title { font: 800 44px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.96); letter-spacing: .04em; }
+    .eyebrow { font: 700 18px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.82); letter-spacing: .18em; text-transform: uppercase; }
+    .label { font: 700 20px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.9); }
+    .small { font: 600 16px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.74); }
+</style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <circle cx="1450" cy="140" r="250" fill="#8ef7cd" opacity=".42" filter="url(#blur-lg)"/>
+  <circle cx="220" cy="1040" r="300" fill="#ffd27d" opacity=".30" filter="url(#blur-lg)"/>
+  <circle cx="1120" cy="920" r="180" fill="#ffffff" opacity=".08" filter="url(#blur-lg)"/>
+  <g opacity=".12" stroke="#ffffff" fill="none">
+    <path d="M70 180c160-60 320-74 470-18s316 68 520 8 332-58 470 8"/>
+    <path d="M20 248c186-76 378-90 570-24s390 74 574 10 316-66 436-26"/>
+    <path d="M84 1034c220-76 388-86 542-22s338 74 544 14 310-66 424-26"/>
+  </g>
+  
+  <g filter="url(#shadow)">
+    <rect x="128" y="132" width="612" height="876" rx="56" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.26"/>
+    <rect x="830" y="182" width="612" height="320" rx="46" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.24"/>
+    <rect x="904" y="572" width="480" height="264" rx="40" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.24"/>
+  </g>
+  <text x="188" y="218" class="eyebrow">ACCESS</text>
+  <text x="188" y="300" class="title">Secure sign-in</text>
+  <text x="188" y="352" class="title">for every role</text>
+  <text x="188" y="430" class="small">Partners, admins, transporters and sellers share one polished workspace.</text>
+  <g transform="translate(184 502)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="500" height="392" rx="38" fill="#ffffff" opacity=".12"/>
+    <rect x="40" y="44" width="170" height="18" rx="9" fill="#ffffff" opacity=".20"/>
+    <rect x="40" y="104" width="420" height="66" rx="22" fill="#ffffff" opacity=".14"/>
+    <rect x="40" y="194" width="420" height="66" rx="22" fill="#ffffff" opacity=".14"/>
+    <rect x="40" y="298" width="200" height="58" rx="28" fill="url(#accentA)"/>
+    <rect x="262" y="298" width="198" height="58" rx="28" fill="#ffffff" opacity=".18"/>
+    <circle cx="424" cy="138" r="14" fill="#8ef7cd"/>
+    <circle cx="424" cy="228" r="14" fill="#ffd27d"/>
+  </g>
+  <g transform="translate(890 236)">
+    <rect x="0" y="0" width="228" height="226" rx="30" fill="#ffffff" opacity=".12"/>
+    <rect x="250" y="0" width="236" height="226" rx="30" fill="#ffffff" opacity=".12"/>
+    <rect x="24" y="32" width="118" height="16" rx="8" fill="#ffffff" opacity=".22"/>
+    <rect x="26" y="82" width="36" height="96" rx="18" fill="#ffffff" opacity="0.92"/><rect x="78" y="110" width="36" height="68" rx="18" fill="#ffffff" opacity="0.74"/><rect x="130" y="56" width="36" height="122" rx="18" fill="#ffffff" opacity="0.54"/>
+    <rect x="274" y="32" width="120" height="16" rx="8" fill="#ffffff" opacity=".22"/>
+    <path d="M286 158c34-54 84-80 148-82" stroke="#ffffff" stroke-opacity=".9" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M286 158c46-20 90-10 154 42" stroke="#8ef7cd" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+  <g transform="translate(972 634)">
+    <g filter="url(#soft-shadow)"><rect x="0" y="0" width="188" height="188" rx="20" fill="#ffffff" opacity=".96"/><rect x="16.0" y="16.0" width="31.0" height="31.0" rx="8" fill="#153b33"/><rect x="157.0" y="16.0" width="31.0" height="31.0" rx="8" fill="#153b33"/><rect x="16.0" y="157.0" width="31.0" height="31.0" rx="8" fill="#153b33"/><rect x="86.5" y="39.5" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="110.0" y="63.0" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="86.5" y="86.5" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="133.5" y="86.5" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="63.0" y="110.0" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="110.0" y="110.0" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="133.5" y="133.5" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="86.5" y="157.0" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="133.5" y="157.0" width="7.5" height="7.5" rx="8" fill="#153b33"/><rect x="86.5" y="133.5" width="7.5" height="7.5" rx="8" fill="#153b33"/></g>
+    <rect x="220" y="12" width="150" height="18" rx="9" fill="#ffffff" opacity=".24"/>
+    <rect x="220" y="52" width="194" height="16" rx="8" fill="#ffffff" opacity=".14"/>
+    <rect x="220" y="100" width="160" height="56" rx="28" fill="url(#accentA)"/>
+    <rect x="220" y="176" width="118" height="16" rx="8" fill="#ffffff" opacity=".20"/>
+  </g>
+
+</svg>

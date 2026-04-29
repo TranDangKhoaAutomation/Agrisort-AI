@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài liệu phát triển</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost/public/css/app.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="http://localhost">AGRISORT-AI</a>
+    <nav class="main-nav">
+      <a href="http://localhost">Trang chủ</a>
+              <a href="http://localhost/blog">Bài viết</a>
+        <a href="http://localhost/docs">Tài liệu</a>
+        <a href="http://localhost/trace">Quét QR truy xuất</a>
+        <a href="http://localhost/en?redirect=%2Fdocs" class="lang-toggle">EN</a>
+        <a href="http://localhost/auth/login">Đăng nhập</a>
+          </nav>
+  </div>
+</header>
+<main class="site-main">
+  <div class="container flash-wrap">
+          </div>
+
+
+<section class="container page-section">
+  <div class="docs-hero card">
+    <div>
+      <p class="section-kicker">Cổng tài liệu dành cho đội phát triển</p>
+      <h1>Developer Documentation <span class="docs-version">V1</span></h1>
+      <p>Bao phủ đầy đủ public site, auth, partner, admin và machine API. Nội dung đồng bộ từ route catalog để tránh lệch tài liệu.</p>
+    </div>
+    <div class="docs-hero-actions">
+      <a href="http://localhost/docs/openapi.json" class="btn secondary" target="_blank" rel="noopener">OpenAPI JSON</a>
+      <a href="http://localhost/docs/postman.json" class="btn secondary" target="_blank" rel="noopener">Postman JSON</a>
+      <a href="http://localhost/docs?section=machine-api" class="btn primary">Đi tới Machine API</a>
+    </div>
+  </div>
+
+  <div class="docs-shell">
+    <aside class="docs-aside card">
+      <h2>Danh mục section</h2>
+      <nav class="docs-nav">
+                            <a
+            href="http://localhost/docs?section=overview"
+            class="is-active"
+            aria-current="page"
+          >
+            Tổng quan          </a>
+                            <a
+            href="http://localhost/docs?section=setup-local"
+            class=""
+            aria-current="false"
+          >
+            Thiết lập local          </a>
+                            <a
+            href="http://localhost/docs?section=architecture"
+            class=""
+            aria-current="false"
+          >
+            Kiến trúc          </a>
+                            <a
+            href="http://localhost/docs?section=rbac-auth"
+            class=""
+            aria-current="false"
+          >
+            RBAC và xác thực          </a>
+                            <a
+            href="http://localhost/docs?section=web-routes"
+            class=""
+            aria-current="false"
+          >
+            Danh mục web routes          </a>
+                            <a
+            href="http://localhost/docs?section=machine-api"
+            class=""
+            aria-current="false"
+          >
+            Machine API          </a>
+                            <a
+            href="http://localhost/docs?section=data-model"
+            class=""
+            aria-current="false"
+          >
+            Mô hình dữ liệu          </a>
+                            <a
+            href="http://localhost/docs?section=partner-flows"
+            class=""
+            aria-current="false"
+          >
+            Luồng Partner          </a>
+                            <a
+            href="http://localhost/docs?section=admin-flows"
+            class=""
+            aria-current="false"
+          >
+            Luồng Admin          </a>
+                            <a
+            href="http://localhost/docs?section=security"
+            class=""
+            aria-current="false"
+          >
+            Bảo mật          </a>
+                            <a
+            href="http://localhost/docs?section=extension-web"
+            class=""
+            aria-current="false"
+          >
+            Mở rộng Web          </a>
+                            <a
+            href="http://localhost/docs?section=extension-app"
+            class=""
+            aria-current="false"
+          >
+            Mở rộng App          </a>
+                            <a
+            href="http://localhost/docs?section=deployment"
+            class=""
+            aria-current="false"
+          >
+            Triển khai          </a>
+                            <a
+            href="http://localhost/docs?section=testing"
+            class=""
+            aria-current="false"
+          >
+            Kiểm thử          </a>
+                            <a
+            href="http://localhost/docs?section=changelog"
+            class=""
+            aria-current="false"
+          >
+            Changelog          </a>
+              </nav>
+      <p class="muted">Ngôn ngữ hiện tại: <strong>VI</strong></p>
+    </aside>
+
+    <div class="docs-content">
+      <article class="docs-article card" id="docs-active-section">
+        <div class="docs-article-head">
+          <p class="section-kicker">Nội dung tài liệu</p>
+          <h2>Tổng quan</h2>
+        </div>
+        <div class="docs-markdown">
+          <h1>Tổng quan</h1>
+<p>AGRISORT-AI là hệ thống phân loại nông sản bằng AI, quản lý lô hàng và truy xuất QR theo mã lô.</p>
+<h2>Mục tiêu</h2>
+<ul>
+<li>Chuẩn hóa dữ liệu lô nông sản sau thu hoạch.</li>
+<li>Tự động công khai truy xuất QR theo cấu hình quản trị.</li>
+<li>Cung cấp bề mặt tích hợp đầy đủ cho đội phát triển web/app mở rộng hệ thống.</li>
+</ul>
+<h2>Chỉ số định lượng chính</h2>
+<ul>
+<li>Độ chính xác thử nghiệm: <code>93-96%</code>.</li>
+<li>Năng suất mục tiêu: <code>1.000-2.000 quả/giờ</code>.</li>
+<li>Thời gian quyết định mục tiêu: <code>&lt;= 200 ms</code>.</li>
+<li>Giảm lao động phân loại trực tiếp: <code>50-70%</code>.</li>
+</ul>
+<h2>Phạm vi triển khai</h2>
+<ul>
+<li>Hợp tác xã nông nghiệp.</li>
+<li>Cơ sở sơ chế sau thu hoạch.</li>
+<li>Doanh nghiệp nông sản quy mô nhỏ-vừa cần truy xuất minh bạch.</li>
+</ul>
+<h2>Vai trò hệ thống</h2>
+<ul>
+<li>
+<code>Visitor</code>: xem landing, blog, truy xuất QR, gửi contact/tư vấn.</li>
+<li>
+<code>Partner</code>: quản lý lô, import CSV, tạo lại QR.</li>
+<li>
+<code>Admin</code>: duyệt đối tác, quản trị hệ thống, CMS, blog, API key.</li>
+</ul>
+<h2>Đội ngũ công khai (tên + vai trò)</h2>
+<ul>
+<li>Nguyễn Khắc Tùng Lâm - Team Lead / System Integration.</li>
+<li>Nguyễn Đăng Quang - AI &amp; Data Pipeline.</li>
+<li>Võ Thị Mỹ - Business &amp; Market Analysis.</li>
+<li>Trần Đăng Khoa - Embedded &amp; Control.</li>
+<li>Lê Hữu Trăng - Mechanical &amp; Automation.</li>
+<li>KS. Vũ Văn Dũng - Advisor.</li>
+<li>ThS. Nguyễn Thị Thành - Advisor.</li>
+</ul>
+<h2>Module chức năng</h2>
+<ul>
+<li>Public website song ngữ VI/EN.</li>
+<li>Auth + RBAC.</li>
+<li>Partner dashboard.</li>
+<li>Admin dashboard.</li>
+<li>Machine API (<code>POST /api/v1/machine/lots</code>).</li>
+<li>Developer docs portal (<code>/docs</code>).</li>
+</ul>
+<h2>Nguồn chuẩn kỹ thuật</h2>
+<ul>
+<li>Route catalog: <code>resources/docs/route_catalog.php</code>.</li>
+<li>Manifest section docs: <code>resources/docs/manifest.php</code>.</li>
+<li>OpenAPI runtime: <code>/docs/openapi.json</code>.</li>
+<li>Postman runtime: <code>/docs/postman.json</code>.</li>
+</ul>
+<h2>Bổ sung 2026-02-27: Chuỗi truy xuất công khai + actor supply</h2>
+<ul>
+<li>Public scanner: <code>GET /trace</code>, <code>POST /trace/scan-upload</code>, <code>GET /trace/{token}</code>.</li>
+<li>Hỗ trợ token lô và token kiện (package).</li>
+<li>Người dùng công khai chỉ có quyền xem timeline và chứng từ.</li>
+<li>Timeline hiển thị event theo <code>event_time</code>, bao gồm <code>stage_code</code>, <code>location_name</code>, <code>note</code>, và danh sách file đính kèm.</li>
+</ul>
+        </div>
+      </article>
+
+      <article class="docs-routes card">
+        <div class="docs-article-head">
+          <p class="section-kicker">Nguồn: resources/docs/route_catalog.php</p>
+          <h2>Route Matrix</h2>
+        </div>
+        <div class="docs-table-wrap">
+          <table class="table docs-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Path</th>
+                <th>Phạm vi</th>
+                <th>Auth</th>
+                <th>Role</th>
+                <th>CSRF</th>
+                <th>Mô tả</th>
+              </tr>
+            </thead>
+            <tbody>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Trang chủ</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/vi</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Chuyển VI</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/en</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Chuyển EN</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/blog</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Danh sách blog</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/blog/{slug}</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Chi tiết blog</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/trace</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Trang scanner truy xuất</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/trace/scan-upload</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Upload file để scan QR</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/trace/{qr_token}</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Xem truy xuất theo token</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/docs</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Portal docs</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/docs/openapi.json</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>OpenAPI JSON</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/docs/postman.json</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Postman JSON</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/contact</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Gửi liên hệ</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/demo-request</code></td>
+                  <td><span class="scope-badge scope-public">public</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Gửi demo request</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/auth/login</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Trang đăng nhập</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/auth/login</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Đăng nhập</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/auth/register</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Đăng ký actor</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/partner/register</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Đăng ký partner legacy</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/auth/forgot-password</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Quên mật khẩu</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/auth/reset-password</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Form reset mật khẩu</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/auth/reset-password</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>no</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Xử lý reset mật khẩu</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/auth/logout</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>yes</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Đăng xuất</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/account</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>yes</td>
+                  <td>-</td>
+                  <td>no</td>
+                  <td>Trang tài khoản</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/account/profile</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>yes</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Cập nhật profile</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/account/password</code></td>
+                  <td><span class="scope-badge scope-auth">auth</span></td>
+                  <td>yes</td>
+                  <td>-</td>
+                  <td>yes</td>
+                  <td>Đổi mật khẩu</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/partner/dashboard</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>no</td>
+                  <td>Dashboard nông dân</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/partner</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>no</td>
+                  <td>Alias dashboard nông dân</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/partner/lots</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>no</td>
+                  <td>Danh sách lô</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/partner/lots</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Tạo lô</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-put">PUT</span></td>
+                  <td><code>/partner/lots/{id}</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Cập nhật lô</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-delete">DELETE</span></td>
+                  <td><code>/partner/lots/{id}</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Xóa lô</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/partner/lots/import-csv</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Import CSV lô</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/partner/lots/{id}/regenerate-qr</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Tạo lại QR lô</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/partner/qr</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>no</td>
+                  <td>Trang QR nông dân</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/partner/packages</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Tạo kiện</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-put">PUT</span></td>
+                  <td><code>/partner/packages/{id}</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Cập nhật kiện</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-delete">DELETE</span></td>
+                  <td><code>/partner/packages/{id}</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Xóa kiện</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/partner/packages/{id}/regenerate-qr</code></td>
+                  <td><span class="scope-badge scope-partner">partner</span></td>
+                  <td>yes</td>
+                  <td>partner|farmer</td>
+                  <td>yes</td>
+                  <td>Tạo lại QR kiện</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/supply/dashboard</code></td>
+                  <td><span class="scope-badge scope-supply">supply</span></td>
+                  <td>yes</td>
+                  <td>transporter|warehouse|seller</td>
+                  <td>no</td>
+                  <td>Dashboard supply actor</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/supply/events</code></td>
+                  <td><span class="scope-badge scope-supply">supply</span></td>
+                  <td>yes</td>
+                  <td>transporter|warehouse|seller</td>
+                  <td>yes</td>
+                  <td>Tạo sự kiện hành trình</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-put">PUT</span></td>
+                  <td><code>/supply/events/{id}</code></td>
+                  <td><span class="scope-badge scope-supply">supply</span></td>
+                  <td>yes</td>
+                  <td>transporter|warehouse|seller</td>
+                  <td>yes</td>
+                  <td>Cập nhật sự kiện hành trình</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/admin/dashboard</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>no</td>
+                  <td>Dashboard admin</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/admin</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>no</td>
+                  <td>Alias dashboard admin</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-get">GET</span></td>
+                  <td><code>/admin/trace</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>no</td>
+                  <td>Trang quản trị truy xuất</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/users/{id}/status</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Đổi trạng thái user</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/trace/assignments</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Lưu phân công trace</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-delete">DELETE</span></td>
+                  <td><code>/admin/trace/assignments/{id}</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Xóa phân công trace</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/partners/{id}/approve</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Duyệt partner</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/settings</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Cập nhật settings</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/cms/{section_key}</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Cập nhật CMS</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/blog</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Cập nhật blog</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/api-keys</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Tạo API key</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/admin/lots/{id}/publish</code></td>
+                  <td><span class="scope-badge scope-admin">admin</span></td>
+                  <td>yes</td>
+                  <td>admin</td>
+                  <td>yes</td>
+                  <td>Đổi publish lô</td>
+                </tr>
+                                              <tr>
+                  <td><span class="method-badge method-post">POST</span></td>
+                  <td><code>/api/v1/machine/lots</code></td>
+                  <td><span class="scope-badge scope-machine-api">machine-api</span></td>
+                  <td>yes</td>
+                  <td>api-key</td>
+                  <td>no</td>
+                  <td>Machine API tạo lô</td>
+                </tr>
+                          </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>AGRISORT-AI - Giải pháp Việt cho nông nghiệp thông minh</p>
+    <small class="footer-note">Nền tảng truy xuất và quản trị nông sản thông minh.</small>
+  </div>
+</footer>
+<script src="http://localhost/public/vendor/jsQR.js"></script>
+<script src="http://localhost/public/js/app.js"></script>
+</body>
+</html>
+
+

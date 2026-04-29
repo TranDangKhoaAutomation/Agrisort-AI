@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-label="Capability illustration for machine vision">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12516b"/>
+      <stop offset="100%" stop-color="#6f57ff"/>
+    </linearGradient>
+    <linearGradient id="accentA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d1ff"/>
+      <stop offset="100%" stop-color="#7e65ff"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,.30)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,.08)"/>
+    </linearGradient>
+    <filter id="blur-lg" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#101938" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#121b3d" flood-opacity=".12"/>
+    </filter>
+    <style>
+    .title { font: 800 44px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.96); letter-spacing: .04em; }
+    .eyebrow { font: 700 18px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.82); letter-spacing: .18em; text-transform: uppercase; }
+    .label { font: 700 20px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.9); }
+    .small { font: 600 16px 'Segoe UI', 'Be Vietnam Pro', sans-serif; fill: rgba(255,255,255,.74); }
+</style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <circle cx="1450" cy="140" r="250" fill="#8ae0ff" opacity=".42" filter="url(#blur-lg)"/>
+  <circle cx="220" cy="1040" r="300" fill="#8af3cd" opacity=".30" filter="url(#blur-lg)"/>
+  <circle cx="1120" cy="920" r="180" fill="#ffffff" opacity=".08" filter="url(#blur-lg)"/>
+  <g opacity=".12" stroke="#ffffff" fill="none">
+    <path d="M70 180c160-60 320-74 470-18s316 68 520 8 332-58 470 8"/>
+    <path d="M20 248c186-76 378-90 570-24s390 74 574 10 316-66 436-26"/>
+    <path d="M84 1034c220-76 388-86 542-22s338 74 544 14 310-66 424-26"/>
+  </g>
+  
+  <g filter="url(#shadow)"><rect x="126" y="150" width="1348" height="820" rx="54" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.24"/></g>
+  <text x="188" y="242" class="eyebrow">VISION STACK</text>
+  <text x="188" y="316" class="title">Camera to AI pipeline</text>
+  <g transform="translate(178 394)">
+    <rect x="0" y="0" width="500" height="448" rx="42" fill="#ffffff" opacity=".10"/>
+    <rect x="68" y="70" width="362" height="236" rx="34" fill="#ffffff" opacity=".14"/>
+    <circle cx="250" cy="188" r="74" fill="#ffffff" opacity=".86"/>
+    <circle cx="250" cy="188" r="42" fill="#67b8ff" opacity=".94"/>
+    <circle cx="250" cy="188" r="18" fill="#12364d" opacity=".94"/>
+    <path d="M142 354h220" stroke="#ffffff" stroke-opacity=".44" stroke-width="16" stroke-linecap="round"/>
+    <path d="M142 390h156" stroke="#ffffff" stroke-opacity=".26" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(736 428)">
+    <path d="M0 122c120-112 260-160 424-162" stroke="#ffffff" stroke-opacity=".76" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M0 122c158-10 278 44 400 172" stroke="#8ae0ff" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <circle cx="0" cy="122" r="20" fill="#ffffff"/>
+    <circle cx="424" cy="-40" r="18" fill="#ffffff" opacity=".94"/>
+    <circle cx="400" cy="294" r="18" fill="#8af3cd" opacity=".96"/>
+  </g>
+  <g transform="translate(988 336)">
+    <rect x="0" y="0" width="316" height="396" rx="40" fill="#ffffff" opacity=".12"/>
+    <rect x="30" y="34" width="120" height="16" rx="8" fill="#ffffff" opacity=".22"/>
+    <rect x="36" y="106" width="54" height="162" rx="18" fill="#ffffff" opacity="0.96"/><rect x="114" y="74" width="54" height="194" rx="18" fill="#ffffff" opacity="0.8"/><rect x="192" y="142" width="54" height="126" rx="18" fill="#ffffff" opacity="0.62"/>
+    <path d="M46 330c64-72 124-100 220-112" stroke="#ffffff" stroke-opacity=".84" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+
+</svg>

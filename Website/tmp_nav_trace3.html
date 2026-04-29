@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tra cứu lô nông sản</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost/public/css/app.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="http://localhost">AGRISORT-AI</a>
+    <nav class="main-nav">
+      <a href="http://localhost" class="">Trang chủ</a>
+              <a href="http://localhost/dashboard" class="">Bảng điều khiển</a>
+        <a href="http://localhost/trace" class="is-active">Quét QR truy xuất</a>
+        <a href="http://localhost/en?redirect=%2Ftrace" class="lang-toggle">EN</a>
+        <details class="nav-account-menu ">
+          <summary title="System Admin"><span class="nav-account-label">System Admin</span></summary>
+          <div class="nav-account-menu-list">
+            <a href="http://localhost/account" class="">Tài khoản</a>
+            <form method="post" accept-charset="UTF-8" action="http://localhost/auth/logout" class="nav-account-menu-form">
+              <input type="hidden" name="_token" value="f9c7e57d4249087b157fc6e8f1022fec63adc32131373a2ba7655e795ab50f60">              <button type="submit" class="link-btn">Đăng xuất</button>
+            </form>
+          </div>
+        </details>
+          </nav>
+  </div>
+</header>
+<main class="site-main">
+  <div class="container flash-wrap">
+          </div>
+
+<section
+  class="container page-section trace-scan-page"
+  data-trace-scanner
+  data-upload-endpoint="http://localhost/trace/scan-upload"
+  data-trace-base="http://localhost/trace/"
+  data-msg-camera-ready="Camera đã sẵn sàng. Đưa mã QR vào khung hình để quét."
+  data-msg-camera-scanning="Đang quét camera..."
+  data-msg-camera-stopped="Camera đã dừng."
+  data-msg-camera-denied="Bạn đã từ chối quyền camera. Hãy dùng upload file hoặc nhập token."
+  data-msg-camera-unsupported="Trình duyệt không hỗ trợ camera scanner. Hãy dùng upload file."
+  data-msg-upload-processing="Đang xử lý file tải lên..."
+  data-msg-upload-client-failed="Không đọc được QR từ ảnh trên trình duyệt, đang chuyển sang xử lý server."
+  data-msg-upload-server-failed="Không thể đọc token từ file đã tải lên."
+  data-msg-token-invalid="Token chưa hợp lệ. Vui lòng kiểm tra lại."
+  data-msg-result-camera="Đã quét thành công từ camera."
+  data-msg-result-upload-client="Đã quét thành công từ ảnh trên trình duyệt."
+  data-msg-result-upload-server="Đã quét thành công từ upload server."
+  data-msg-result-manual="Đã nhận token từ nhập tay."
+  data-msg-toast-valid="Đã quét thành công."
+  data-msg-toast-invalid="QR có nhưng token không hợp lệ."
+  data-msg-toast-system="Không xử lý được lúc này. Vui lòng thử lại."
+  data-msg-history-empty="Chưa có mã nào được quét."
+  data-label-status-valid="Hợp lệ"
+  data-label-status-invalid="Không hợp lệ"
+  data-label-entity-unknown="Chưa xác định"
+  data-label-open-trace="Mở truy xuất"
+>
+  <div class="section-head section-head-inline">
+    <p class="section-kicker">Trung tâm truy xuất</p>
+    <h1>Tra cứu lô nông sản</h1>
+  </div>
+
+  <div class="trace-scan-grid">
+    <article class="card trace-scan-card">
+      <h2>Quét bằng camera</h2>
+      <p class="muted">Ưu tiên camera sau của điện thoại để nhận diện nhanh hơn.</p>
+
+      <div class="trace-camera-shell">
+        <video class="trace-camera-preview" data-trace-video playsinline muted></video>
+        <canvas class="trace-overlay-canvas" data-trace-overlay></canvas>
+      </div>
+
+      <div class="inline-actions">
+        <button type="button" class="btn primary" data-trace-camera-start>
+          Bật camera        </button>
+        <button type="button" class="btn secondary" data-trace-camera-stop disabled>
+          Tắt camera        </button>
+      </div>
+
+      <p class="muted trace-status" data-trace-camera-status>
+        Sẵn sàng quét. Nhấn &quot;Bật camera&quot; để bắt đầu.      </p>
+    </article>
+
+    <article class="card trace-upload-card">
+      <h2>Upload file QR</h2>
+      <p class="muted">Hỗ trợ ảnh JPG/PNG/WEBP và PDF chứa mã QR.</p>
+
+      <form method="post" accept-charset="UTF-8" action="http://localhost/trace/scan-upload" enctype="multipart/form-data" class="form-card" data-trace-upload-form>
+        <input type="hidden" name="_token" value="f9c7e57d4249087b157fc6e8f1022fec63adc32131373a2ba7655e795ab50f60">        <label>
+          Chọn file          <input type="file" name="trace_file" accept="image/*,.pdf" required data-trace-upload-input>
+        </label>
+        <button type="submit" class="btn secondary">
+          Phân tích file        </button>
+      </form>
+
+      <p class="muted trace-status" data-trace-upload-status></p>
+
+      <hr class="trace-divider">
+
+      <h3>Nhập token thủ công</h3>
+      <form class="form-card compact" accept-charset="UTF-8" data-trace-manual-form>
+        <label>
+          Token hoặc URL          <input
+            type="text"
+            placeholder="Ví dụ: agrisort-lot-001"
+            data-trace-token-input
+            required
+          >
+        </label>
+        <button type="submit" class="btn">
+          Tra cứu token        </button>
+      </form>
+      <p class="muted trace-status" data-trace-manual-status></p>
+
+      <div class="inline-actions">
+        <a class="btn secondary" href="http://localhost/trace/agrisort-lot-001">
+          Xem lô mẫu        </a>
+      </div>
+    </article>
+  </div>
+
+  <article class="card trace-result-card is-hidden" data-trace-result-card>
+    <p class="section-kicker">Kết quả quét</p>
+    <h2>Đã nhận diện token QR</h2>
+    <p><strong>Token:</strong> <span data-trace-result-token>-</span></p>
+    <p><strong>Loại thực thể:</strong> <span data-trace-result-entity>Chưa xác định</span></p>
+    <p class="muted" data-trace-result-source></p>
+    <div class="inline-actions">
+      <a class="btn primary" href="#" data-trace-open-link>
+        Mở trang truy xuất      </a>
+      <button type="button" class="btn secondary" data-trace-reset>
+        Xóa kết quả hiện tại      </button>
+    </div>
+  </article>
+
+  <article class="card trace-history-card">
+    <div class="trace-history-head">
+      <h2>Lịch sử đã quét</h2>
+      <button type="button" class="btn secondary" data-trace-history-clear>
+        Xóa lịch sử      </button>
+    </div>
+    <div class="trace-history-table-wrap">
+      <table class="table trace-history-table">
+        <thead>
+          <tr>
+            <th>Sản phẩm/Loại</th>
+            <th>Token</th>
+            <th>Trạng thái</th>
+            <th>Lần cuối</th>
+            <th>Số lần</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody data-trace-history-body>
+          <tr data-trace-history-empty>
+            <td colspan="6">Chưa có mã nào được quét.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="trace-toast-wrap" data-trace-toast-wrap aria-live="polite" aria-atomic="true"></div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>AGRISORT-AI - Giải pháp Việt cho nông nghiệp thông minh</p>
+    <small class="footer-note">Nền tảng truy xuất và quản trị nông sản thông minh.</small>
+  </div>
+</footer>
+<script src="http://localhost/public/vendor/jsQR.js"></script>
+<script src="http://localhost/public/js/app.js"></script>
+</body>
+</html>
+
+
+
+
