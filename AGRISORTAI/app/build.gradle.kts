@@ -32,7 +32,7 @@ fun escapeBuildConfig(value: String): String {
 
 val webUri = URI(webBaseUrl)
 val deepLinkScheme = webUri.scheme ?: "https"
-val deepLinkHost = webUri.host ?: "trandangkhoatechnology.xyz"
+val deepLinkHost = webUri.host ?: "TranDangKhoaAutomation.xyz"
 
 android {
     namespace = "com.example.agrisort_ai"
