@@ -1,72 +1,12 @@
 name: Rebrand to TranDangKhoaAutomation
-
+# Final tracked-text branding/copyright normalization 2026-09-11
 on:
   push:
-    paths:
-      - ".github/workflows/rebrand-automation.yml"
-
+    paths: [".github/workflows/rebrand-automation.yml"]
 permissions:
   contents: write
-
 jobs:
   rebrand:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Standardize personal branding
-        shell: python
-        run: |
-          from pathlib import Path
-          import re
-          TARGET = "TranDangKhoaAutomation"
-          WORKFLOW_PATH = ".github/workflows/rebrand-automation.yml"
-          SKIP_DIRS = {".git", "node_modules", ".pio", "build", "dist", ".venv", "venv", "vendor"}
-          PROTECTED_URL = re.compile(r"https?://[^\s\"'<>)]*(?:youtube\.com/@(?:codewithkhoa|trandangkhoatechnology)|trandangkhoatechnology\.github\.io|trandangkhoatechnology\.xyz)[^\s\"'<>)]*", re.IGNORECASE)
-          def replace_branding(text: str) -> str:
-              protected = []
-              def stash(match):
-                  protected.append(match.group(0)); return f"__TDK_PROTECTED_URL_{len(protected)-1}__"
-              text = PROTECTED_URL.sub(stash, text)
-              text = re.sub(r"(?i)https://github\.com/(?:CodeWithKhoa|TranDangKhoaTechnology)/", f"https://github.com/{TARGET}/", text)
-              text = re.sub(r"(?i)https://raw\.githubusercontent\.com/(?:CodeWithKhoa|TranDangKhoaTechnology)/", f"https://raw.githubusercontent.com/{TARGET}/", text)
-              text = re.sub(r"(?i)\bcode\s*with\s*khoa\b", TARGET, text)
-              text = re.sub(r"(?i)\btrandangkhoatechnology\b", TARGET, text)
-              text = re.sub(r"(?i)\btran\s+dang\s+khoa\s+technology\b", TARGET, text)
-              text = re.sub(r"(?i)\btrần\s+đăng\s+khoa\s+technology\b", TARGET, text)
-              text = re.sub(r"(?i)\btran\s+dang\s+khoa\s+automation\b", TARGET, text)
-              for i, value in enumerate(protected): text = text.replace(f"__TDK_PROTECTED_URL_{i}__", value)
-              return text
-          changed = []
-          root = Path(".")
-          for path in root.rglob("*"):
-              if not path.is_file() or path.as_posix() == WORKFLOW_PATH or any(part in SKIP_DIRS for part in path.parts): continue
-              try:
-                  raw = path.read_bytes()
-                  if b"\x00" in raw: continue
-                  text = raw.decode("utf-8")
-              except (UnicodeDecodeError, OSError): continue
-              new_text = replace_branding(text)
-              if new_text != text:
-                  path.write_text(new_text, encoding="utf-8", newline=""); changed.append(str(path))
-          paths = sorted((p for p in root.rglob("*") if p.exists()), key=lambda p: len(p.parts), reverse=True)
-          for path in paths:
-              if path.as_posix() == WORKFLOW_PATH or any(part in SKIP_DIRS for part in path.parts): continue
-              new_name = re.sub(r"(?i)code\s*with\s*khoa|trandangkhoatechnology", TARGET, path.name)
-              if new_name == path.name: continue
-              dest = path.with_name(new_name)
-              if dest.exists(): continue
-              try: path.rename(dest); changed.append(f"{path} -> {dest}")
-              except OSError: pass
-          print(f"Changed entries: {len(changed)}")
-          for item in changed: print(item)
-      - name: Commit migration
-        shell: bash
-        run: |
-          if git diff --quiet && git diff --cached --quiet; then echo "No branding changes needed."; exit 0; fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "chore: standardize branding to TranDangKhoaAutomation"
-          git push
+    uses: TranDangKhoaAutomation/Codex-Plugin-Bridge/.github/workflows/rebrand-reusable.yml@main
+    permissions:
+      contents: write
